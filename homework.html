@@ -6,9 +6,35 @@
     <meta charset="UTF-8">
     <title>Home Work 20</title>
     <script>
+        function checkAge(age){
+            if (age >= 0 && age <= 17) {
+                alert('Вы ввели неправильный возраст!');
+            } else if (age >=18 && age <= 60) {
+                alert('Вы ввели верный возраст!');
+            } else if (age > 60) {
+                alert('Вы стары для этого сайта');
+            }
+
+        }
+        function checkDay(dayId) {
+            if (dayId == 1) {
+                alert('кошмар еще вся неделя впереди');
+            } else if (dayId == 2) {
+                alert('уже не понедельник');
+            } else if (dayId == 3){
+                alert('Экватор');
+
+            } else if (dayId == 4) {
+                alert('Почти');
+
+            } else if (dayId == 5) {
+                alert('Наконец то');
+            }
+        }
+
 
     </script>
-    <link rel="shortcut icon" href="img/icon/favicon2.ico">
+    <link rel="shortcut icon" href="img/icon/favicon.ico">
 
 </head>
 <body>
@@ -16,7 +42,19 @@
         <h1>Домашнее задание</h1>
         <form action="" class="form">
             <input id="age" type="text" placeholder="Введите ваш возраст">
+            <input class="button" type="button" value="Проверить возраст" onclick="checkAge(age.value)">
+            <select class="check_day" onchange="checkDay(this.value)">
+                <option value="0">-- Выберите день  --</option>
+                <option value="1">Понедельник</option>
+                <option value="2">Вторник</option>
+                <option value="3">Среда</option>
+                <option value="4">Четверг</option>
+                <option value="5">Пятница</option>
+
+            </select>
         </form>
     </div>
+
+
 </body>
 </html>
